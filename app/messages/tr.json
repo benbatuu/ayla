@@ -1,0 +1,422 @@
+{
+  "metadata": {
+    "title": "Ay'la Food & More | Bazı Şeyler Asla Değişmez",
+    "description": "Ay'la Food & More | Bazı Şeyler Asla Değişmez. Akdeniz ve Türk mutfağı, steak & ızgara. Her gün 10:00–01:00."
+  },
+  "header": {
+    "menu": "Menü",
+    "story": "Hikâyemiz",
+    "gallery": "Galeri",
+    "reviews": "Yorumlar",
+    "faq": "SSS",
+    "contact": "İletişim",
+    "reservation": "Rezervasyon",
+    "makeReservation": "Rezervasyon Yap",
+    "fullMenu": "Tam menü",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "skipToContent": "İçeriğe geç",
+    "languages": {
+      "tr": "Türkçe",
+      "en": "English",
+      "ru": "Русский"
+    }
+  },
+  "hero": {
+    "eyebrow": "Ay'la Food & More",
+    "title": "Bazı Şeyler",
+    "titleLine2": "Asla Değişmez.",
+    "reservation": "Rezervasyon Yap",
+    "discoverMenu": "Menüyü Keşfet",
+    "fullMenu": "Tam menü",
+    "tagline": "Ay'la Food & More | Bazı Şeyler Asla Değişmez",
+    "scroll": "Kaydır"
+  },
+  "story": {
+    "chapters": {
+      "story": "Hikâye",
+      "kitchen": "Mutfak",
+      "table": "Sofra",
+      "ayla": "Ay'la"
+    },
+    "scrollHint": "Keşfetmek için kaydır",
+    "chapter1": {
+      "label": "01 / Hikâye",
+      "titleLine1": "Zaman değişir.",
+      "titleLine2": "Bazı şeyler",
+      "titleLine3": "değişmez.",
+      "paragraph": "İyi bir sofranın yalnızca ne yediğimizle değil, kimlerle paylaştığımızla ilgili olduğuna inanıyoruz.",
+      "tagline": "Bazı Şeyler Asla Değişmez.",
+      "imageMainAlt": "Ay'la restoranında sofra",
+      "imageDetailAlt": "Ay'la mutfağından detay"
+    },
+    "chapter2": {
+      "label": "02 / Mutfak",
+      "titleLine1": "Ateş.",
+      "titleLine2": "Malzeme.",
+      "titleLine3": "Karakter.",
+      "paragraph": "Gösterişten önce malzeme gelir. Mevsiminde olanı seçer, ateşle buluşturur ve mümkün olduğunca az dokunuruz.",
+      "heartOfKitchen": "Mutfağın kalbi",
+      "imageAlt": "Ay'la mutfağında ateş ve ızgara"
+    },
+    "chapter3": {
+      "label": "03 / Sofra",
+      "title": "Sofra",
+      "quote": "Çünkü bazı akşamlar yemek için değil,",
+      "quoteItalic": "hatırlamak için yaşanır.",
+      "imageAlt": "Ay'la'da akşam sofrası"
+    },
+    "chapter4": {
+      "label": "04 / Ay'la",
+      "titleLine1": "Masanız",
+      "titleLine2": "hazır.",
+      "description": "İyi yemek, iyi insanlar ve uzun akşamlar için kendinize bir masa ayırın.",
+      "reservation": "Rezervasyon Yap",
+      "location": "Ay'la · Alanya",
+      "hours": "Her gün · 10:00 — 01:00",
+      "imageAlt": "Ay'la restoranı Alanya"
+    }
+  },
+  "menu": {
+    "label": "Ay'la / Menü",
+    "titleLine1": "Mutfağın",
+    "titleLine2": "içinden.",
+    "description": "Mevsimin getirdikleri, ateşin karakteri ve Ay'la mutfağından seçtiğimiz birkaç tabak.",
+    "exploreMenu": "Menüyü Keşfet",
+    "dishes": [
+      {
+        "category": "Başlangıç",
+        "name": "Acılı Ezme",
+        "description": "Domates, biber ve baharatlarla taze hazırlanan klasik acılı ezme; çıtır lavaş ve nane ile."
+      },
+      {
+        "category": "Ana Yemek",
+        "name": "Kalem Kuzu Pirzola",
+        "description": "Izgara kalem kuzu pirzola; köz sebze, soğan salatası ve özel sos ile servis edilir."
+      },
+      {
+        "category": "Ana Yemek",
+        "name": "Mantar Soslu Steak",
+        "description": "Kremalı mantar sosu, köz domates ve dill ile tamamlanan steak; Ay'la imzası."
+      },
+      {
+        "category": "Ana Yemek",
+        "name": "Kuzu Lokum",
+        "description": "Yumuşak kuzu lokum; lavash üzerinde, köz sebze ve sos ile sunulur."
+      }
+    ]
+  },
+  "atmosphere": {
+    "label": "05 / Atmosfer",
+    "titleLine1": "Burada",
+    "titleLine2": "olmak.",
+    "items": [
+      {
+        "title": "Ateşin başında",
+        "subtitle": "Mutfak"
+      },
+      {
+        "title": "Uzun akşamlar",
+        "subtitle": "Sofrada"
+      },
+      {
+        "title": "Sofraya doğru",
+        "subtitle": "Akşam yemeği"
+      },
+      {
+        "title": "Bir masa",
+        "subtitle": "Ay'la"
+      },
+      {
+        "title": "Gece başlarken",
+        "subtitle": "Gün batımından sonra"
+      },
+      {
+        "title": "İyi yemek",
+        "subtitle": "İyi sohbet"
+      },
+      {
+        "title": "Deniz manzarası",
+        "subtitle": "Alanya"
+      },
+      {
+        "title": "Ay'la gecesi",
+        "subtitle": "Akşam ışıkları"
+      }
+    ]
+  },
+  "reservation": {
+    "label": "06 / Ay'la",
+    "restaurant": "Ay'la Food & More",
+    "location": "Alanya · Türkiye",
+    "everyEvening": "Her akşam",
+    "hours": "10:00 — 01:00",
+    "step1": {
+      "eyebrow": "Bir akşam ayırın",
+      "titleLine1": "Bu akşam",
+      "titleLine2": "bir masa.",
+      "guests": "Misafir",
+      "date": "Tarih",
+      "time": "Saat",
+      "selectDate": "Bir tarih seç",
+      "selectTime": "Bir saat seç",
+      "availableTimes": "Uygun saatler",
+      "noTimesAvailable": "Bu gün için uygun saat bulunmuyor.",
+      "selectDateFirst": "Önce bir tarih seçin",
+      "loadingTimes": "Müsait saatler yükleniyor...",
+      "liveAvailability": "Doluluk durumu otomatik güncellenir",
+      "remainingCovers": "{count} kişilik yer",
+      "slotFull": "Dolu",
+      "slotPast": "Geçti",
+      "noTimesForGuests": "{count} kişi için uygun saat kalmadı",
+      "cta": "Masayı Ayır",
+      "hint": "Rezervasyonunuzu oluşturmak için tarih ve saat seçin",
+      "largePartyMessage": "{count} kişiden fazla gruplar için lütfen {phone} numarasından bizi arayın — online rezervasyon bu sayıda alınmıyor.",
+      "largePartyCta": "Telefonla Ara"
+    },
+    "step2": {
+      "back": "← Geri dön",
+      "eyebrow": "Son bir adım",
+      "titleLine1": "Bilgilerinizi",
+      "titleLine2": "bırakın.",
+      "description": "Talebinizi tamamlamak için iletişim bilgilerinizi paylaşın. Ekibimiz onay için sizinle iletişime geçecek.",
+      "guests": "{count} kişi",
+      "name": "Adınız",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "note": "Notunuz",
+      "submit": "Talebi Gönder",
+      "submitting": "Gönderiliyor...",
+      "submitError": "Talep gönderilemedi. Saat dolmuş olabilir, lütfen tekrar deneyin."
+    },
+    "step3": {
+      "titleLine1": "Talebiniz",
+      "titleLine2": "alındı.",
+      "description": "Rezervasyon talebinizi aldık. Ekibimiz kısa süre içinde sizi arayarak onaylayacak. Değişiklik veya iptal için {phone} numarasını arayın — online iptal bulunmuyor.",
+      "guests": "{count} kişi",
+      "backHome": "Ana sayfaya dön"
+    },
+    "months": [
+      "Ocak",
+      "Şubat",
+      "Mart",
+      "Nisan",
+      "Mayıs",
+      "Haziran",
+      "Temmuz",
+      "Ağustos",
+      "Eylül",
+      "Ekim",
+      "Kasım",
+      "Aralık"
+    ],
+    "daysShort": [
+      "P",
+      "S",
+      "Ç",
+      "P",
+      "C",
+      "C",
+      "P"
+    ]
+  },
+  "socialProof": {
+    "label": "Misafirlerimiz",
+    "titleLine1": "Birçok akşam.",
+    "titleLine2": "Birçok güzel söz.",
+    "description": "Ay'la'da geçirdikleri akşamı anlatan misafirlerimizden birkaç satır.",
+    "ratingLabel": "Ortalama puan",
+    "reviewCount": "240+ yorum",
+    "reviewCountLive": "{count} yorum",
+    "writeReview": "Google'da yorum bırak",
+    "viewAllReviews": "Tüm Google yorumları",
+    "liveFromGoogle": "Google'dan canlı",
+    "curatedReviewsNote": "Puan ve yorum sayısı Google'dan canlı gelir. Örnek yorumlar misafir deneyimini yansıtır — tümünü Google'da okuyabilirsiniz.",
+    "readAllReviews": "Tüm yorumları oku",
+    "reviews": [
+      {
+        "name": "Elif K.",
+        "source": "Google",
+        "rating": 5,
+        "date": "Temmuz 2025",
+        "text": "Alanya'da akşam yemeği için gittiğimiz en güzel yerlerden biri. Mezeler taze, etler tam kıvamında. Garsonlar ilgili ama asla baskıcı değil — akşamın tadını çıkarmak isteyenler için ideal."
+      },
+      {
+        "name": "Markus W.",
+        "source": "Tripadvisor",
+        "rating": 5,
+        "date": "Ağustos 2025",
+        "text": "Atmosfer harika, özellikle gün batımında teras tarafı çok keyifli. Çökertme kebabını mutlaka deneyin. Personel İngilizce konuşuyor, turistler için de rahat."
+      },
+      {
+        "name": "Anna & David",
+        "source": "Google",
+        "rating": 5,
+        "date": "Haziran 2025",
+        "text": "Online rezervasyon yaptık, masamız hazırdı. Kabak tatlısı ve fajita favorimiz oldu. Fiyat-performans olarak Alanya'daki birçok restorandan daha iyi."
+      }
+    ],
+    "platforms": [
+      {
+        "label": "Google Reviews",
+        "description": "Google Maps'te yorum yazma ekranını açar."
+      },
+      {
+        "label": "Facebook",
+        "description": "Ay'la'yı Facebook'ta takip edin ve güncel paylaşımları görün."
+      }
+    ],
+    "instagramEyebrow": "Günlük hayatımızdan",
+    "instagramHandle": "@ayla_alanya"
+  },
+  "footer": {
+    "statement": "Ay'la Food & More | Bazı Şeyler Asla Değişmez",
+    "tagline": "Bazı Şeyler Asla Değişmez.",
+    "findUs": "Bizi bulun",
+    "viewMap": "Haritada gör",
+    "discover": "Keşfet",
+    "information": "Bilgi",
+    "contact": "İletişim",
+    "links": {
+      "story": "Hikâyemiz",
+      "menu": "Menü",
+      "atmosphere": "Atmosfer",
+      "reviews": "Yorumlar",
+      "reservation": "Rezervasyon",
+      "faq": "SSS",
+      "contact": "İletişim",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "whatsapp": "WhatsApp",
+      "location": "Konum"
+    },
+    "restaurantName": "Ay'la Food & More",
+    "hours": "Her gün",
+    "country": "Türkiye",
+    "instagramLink": "Instagram →",
+    "whatsappLink": "WhatsApp →",
+    "privacy": "Gizlilik",
+    "kvkk": "KVKK",
+    "copyright": "© {year} Ay'la Food & More",
+    "facebookLink": "Facebook →"
+  },
+  "cookies": {
+    "title": "Çerez tercihleri",
+    "body": "Sitemiz temel işlevler için gerekli çerezler kullanır. Analitik ve pazarlama çerezleri yalnızca onayınızla yüklenir.",
+    "necessary": "Yalnızca gerekli",
+    "acceptAll": "Tümünü kabul et"
+  },
+  "faq": {
+    "metaTitle": "Sıkça Sorulan Sorular | Ay'la",
+    "metaDescription": "Yol tarifi, park, çalışma saatleri, rezervasyon politikası, ödeme ve alerjen bilgileri.",
+    "eyebrow": "Yardım",
+    "title": "Sıkça sorulan sorular",
+    "intro": "Yol tarifi, rezervasyon, ödeme ve alerjenler hakkında en çok merak edilenler.",
+    "back": "Ana sayfaya dön",
+    "directionsTitle": "Yol tarifi & park",
+    "hoursLabel": "Her gün",
+    "callUs": "Bizi arayın",
+    "whatsapp": "WhatsApp",
+    "directionsCta": "Haritada aç",
+    "items": [
+      {
+        "q": "Nasıl gelirim ve park var mı?",
+        "a": "Kadıpaşa, Sugözü Cd. No:10 — Alanya merkez / Kleopatra tarafına yakın. Taksi veya araçla kolay ulaşım. Sokak parkı sınırlıdır; yakındaki otoparkları tercih edin."
+      },
+      {
+        "q": "Çalışma saatleriniz nedir?",
+        "a": "Her gün {openTime} — {closeTime}."
+      },
+      {
+        "q": "Rezervasyon politikası nedir?",
+        "a": "Online rezervasyon en fazla {maxDays} gün öncesine kadar alınır. {threshold} ve üzeri gruplar için lütfen telefonla arayın. İptal veya değişiklik için bizi aramanız yeterli: {phone}."
+      },
+      {
+        "q": "Ödeme nasıl yapılır?",
+        "a": "Masada nakit veya kart ile ödeme alıyoruz. Online ödeme yoktur."
+      },
+      {
+        "q": "Alerjenler / diyet ihtiyaçları?",
+        "a": "Alerjen veya özel diyet durumunuz varsa sipariş öncesi personelimize bildirin; mutfağımız yardımcı olur."
+      }
+    ]
+  },
+  "legal": {
+    "privacy": {
+      "metaTitle": "Gizlilik Politikası | Ay'la",
+      "metaDescription": "Ay'la Food & More gizlilik politikası ve kişisel verilerin korunması.",
+      "title": "Gizlilik Politikası",
+      "updated": "Son güncelleme · Ağustos 2026",
+      "back": "Ana sayfaya dön",
+      "intro": "Ay'la Food & More olarak web sitemizi ve rezervasyon hizmetlerimizi kullanırken paylaştığınız bilgileri yalnızca hizmet sunmak ve sizinle iletişim kurmak için işleriz.",
+      "sections": [
+        {
+          "title": "Topladığımız bilgiler",
+          "paragraphs": [
+            "Rezervasyon formu aracılığıyla ad, telefon, e-posta ve isteğe bağlı not alanlarını toplayabiliriz.",
+            "Web sitesi analitiği için anonim ziyaret verileri (sayfa görüntüleme, cihaz türü) işlenebilir."
+          ]
+        },
+        {
+          "title": "Bilgileri nasıl kullanırız",
+          "paragraphs": [
+            "Rezervasyonunuzu onaylamak, masa planlaması yapmak ve gerekirse sizinle iletişime geçmek için.",
+            "Hizmet kalitemizi ölçmek ve web sitesi deneyimini iyileştirmek için."
+          ]
+        },
+        {
+          "title": "Paylaşım ve saklama",
+          "paragraphs": [
+            "Kişisel verilerinizi üçüncü taraflara satmayız. Yalnızca hizmet sağlayıcılarımız (barındırma, e-posta) ve yasal zorunluluk halinde yetkili kurumlarla paylaşılabilir.",
+            "Rezervasyon kayıtları operasyonel gereklilik süresince saklanır; ardından silinir veya anonimleştirilir."
+          ]
+        },
+        {
+          "title": "Haklarınız",
+          "paragraphs": [
+            "KVKK kapsamındaki haklarınız için bizimle iletişime geçebilirsiniz: reservation@aylaalanya.com"
+          ]
+        }
+      ]
+    },
+    "kvkk": {
+      "metaTitle": "KVKK Aydınlatma Metni | Ay'la",
+      "metaDescription": "Ay'la Food & More 6698 sayılı KVKK kapsamında aydınlatma metni.",
+      "title": "KVKK Aydınlatma Metni",
+      "updated": "Son güncelleme · Ağustos 2026",
+      "back": "Ana sayfaya dön",
+      "intro": "6698 sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\") uyarınca, veri sorumlusu sıfatıyla Ay'la Food & More olarak kişisel verileriniz hakkında sizi bilgilendiriyoruz.",
+      "sections": [
+        {
+          "title": "Veri sorumlusu",
+          "paragraphs": [
+            "Ay'la Food & More — Kadıpaşa, Sugözü Cd. No:10, 07400 Alanya/Antalya. reservation@aylaalanya.com"
+          ]
+        },
+        {
+          "title": "İşlenen kişisel veriler",
+          "paragraphs": [
+            "Kimlik ve iletişim: ad-soyad, telefon, e-posta.",
+            "İşlem güvenliği: IP adresi, çerez/analytics verileri (anonim).",
+            "Rezervasyon: tarih, saat, kişi sayısı, özel not."
+          ]
+        },
+        {
+          "title": "İşleme amaçları ve hukuki sebep",
+          "paragraphs": [
+            "Rezervasyon hizmetinin sunulması (sözleşmenin kurulması/ifası).",
+            "Müşteri ilişkileri yönetimi ve meşru menfaat kapsamında hizmet iyileştirme.",
+            "Yasal yükümlülüklerin yerine getirilmesi."
+          ]
+        },
+        {
+          "title": "Haklarınız",
+          "paragraphs": [
+            "KVKK md. 11 kapsamında; verilerinizin işlenip işlenmediğini öğrenme, düzeltme, silme, itiraz etme ve şikâyet hakkına sahipsiniz.",
+            "Taleplerinizi reservation@aylaalanya.com adresine iletebilirsiniz."
+          ]
+        }
+      ]
+    }
+  }
+}

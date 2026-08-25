@@ -1,0 +1,422 @@
+{
+  "metadata": {
+    "title": "Ay'la Food & More | Some Things Never Change",
+    "description": "Ay'la Food & More | Some Things Never Change. Mediterranean & Turkish cuisine, steak & grill. Open daily 10:00–01:00."
+  },
+  "header": {
+    "menu": "Menu",
+    "story": "Our Story",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "reservation": "Reservation",
+    "makeReservation": "Make a Reservation",
+    "fullMenu": "Full menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to content",
+    "languages": {
+      "tr": "Turkish",
+      "en": "English",
+      "ru": "Russian"
+    }
+  },
+  "hero": {
+    "eyebrow": "Ay'la Food & More",
+    "title": "Some things",
+    "titleLine2": "never change.",
+    "reservation": "Make a Reservation",
+    "discoverMenu": "Explore the Menu",
+    "fullMenu": "Full menu",
+    "tagline": "Ay'la Food & More | Some Things Never Change",
+    "scroll": "Scroll"
+  },
+  "story": {
+    "chapters": {
+      "story": "Story",
+      "kitchen": "Kitchen",
+      "table": "Table",
+      "ayla": "Ay'la"
+    },
+    "scrollHint": "Scroll to explore",
+    "chapter1": {
+      "label": "01 / Story",
+      "titleLine1": "Time changes.",
+      "titleLine2": "Some things",
+      "titleLine3": "never change.",
+      "paragraph": "We believe a great table is not only about what we eat, but who we share it with.",
+      "tagline": "Some Things Never Change.",
+      "imageMainAlt": "Table at Ay'la restaurant",
+      "imageDetailAlt": "Detail from Ay'la kitchen"
+    },
+    "chapter2": {
+      "label": "02 / Kitchen",
+      "titleLine1": "Fire.",
+      "titleLine2": "Ingredient.",
+      "titleLine3": "Character.",
+      "paragraph": "Ingredient comes before showmanship. We choose what's in season, meet it with fire, and touch it as little as possible.",
+      "heartOfKitchen": "Heart of the kitchen",
+      "imageAlt": "Fire and grill in Ay'la kitchen"
+    },
+    "chapter3": {
+      "label": "03 / Table",
+      "title": "Table",
+      "quote": "Because some evenings are lived not for the meal,",
+      "quoteItalic": "but to remember.",
+      "imageAlt": "Evening table at Ay'la"
+    },
+    "chapter4": {
+      "label": "04 / Ay'la",
+      "titleLine1": "Your table",
+      "titleLine2": "is ready.",
+      "description": "Reserve a table for good food, good people and long evenings.",
+      "reservation": "Make a Reservation",
+      "location": "Ay'la · Alanya",
+      "hours": "Daily · 10:00 — 01:00",
+      "imageAlt": "Ay'la restaurant in Alanya"
+    }
+  },
+  "menu": {
+    "label": "Ay'la / Menu",
+    "titleLine1": "From the",
+    "titleLine2": "kitchen.",
+    "description": "What the season brings, the character of fire, and a few plates from Ay'la's kitchen.",
+    "exploreMenu": "Explore the Menu",
+    "dishes": [
+      {
+        "category": "Starter",
+        "name": "Spicy Ezme",
+        "description": "Freshly chopped tomatoes, peppers and spices; served with crisp lavash and mint."
+      },
+      {
+        "category": "Main Course",
+        "name": "Lamb Cutlets",
+        "description": "Grilled lamb cutlets with roasted vegetables, onion salad and house sauce."
+      },
+      {
+        "category": "Main Course",
+        "name": "Steak with Mushroom Sauce",
+        "description": "Steak finished with creamy mushroom sauce, roasted cherry tomatoes and dill."
+      },
+      {
+        "category": "Main Course",
+        "name": "Lamb Lokum",
+        "description": "Tender lamb lokum on lavash, with roasted vegetables and dipping sauce."
+      }
+    ]
+  },
+  "atmosphere": {
+    "label": "05 / Atmosphere",
+    "titleLine1": "Being",
+    "titleLine2": "here.",
+    "items": [
+      {
+        "title": "By the fire",
+        "subtitle": "The kitchen"
+      },
+      {
+        "title": "Long evenings",
+        "subtitle": "At the table"
+      },
+      {
+        "title": "Toward the table",
+        "subtitle": "Dinner time"
+      },
+      {
+        "title": "One table",
+        "subtitle": "Ay'la"
+      },
+      {
+        "title": "As night begins",
+        "subtitle": "After sunset"
+      },
+      {
+        "title": "Good food",
+        "subtitle": "Good company"
+      },
+      {
+        "title": "Sea view",
+        "subtitle": "Alanya"
+      },
+      {
+        "title": "An Ay'la evening",
+        "subtitle": "Night lights"
+      }
+    ]
+  },
+  "reservation": {
+    "label": "06 / Ay'la",
+    "restaurant": "Ay'la Food & More",
+    "location": "Alanya · Turkey",
+    "everyEvening": "Every evening",
+    "hours": "10:00 — 01:00",
+    "step1": {
+      "eyebrow": "Reserve an evening",
+      "titleLine1": "Tonight,",
+      "titleLine2": "a table.",
+      "guests": "Guests",
+      "date": "Date",
+      "time": "Time",
+      "selectDate": "Select a date",
+      "selectTime": "Select a time",
+      "availableTimes": "Available times",
+      "noTimesAvailable": "No available times for this day.",
+      "selectDateFirst": "Select a date first",
+      "loadingTimes": "Loading available times...",
+      "liveAvailability": "Availability updates automatically",
+      "remainingCovers": "{count} seats left",
+      "slotFull": "Full",
+      "slotPast": "Past",
+      "noTimesForGuests": "No times left for {count} guests",
+      "cta": "Reserve Table",
+      "hint": "Select a date and time to create your reservation",
+      "largePartyMessage": "For parties larger than {count} guests, please call us at {phone} — online booking isn’t available at this size.",
+      "largePartyCta": "Call Us"
+    },
+    "step2": {
+      "back": "← Go back",
+      "eyebrow": "One last step",
+      "titleLine1": "Leave your",
+      "titleLine2": "details.",
+      "description": "Share your contact details to complete your request. Our team will reach out to confirm.",
+      "guests": "{count} guests",
+      "name": "Your name",
+      "phone": "Phone",
+      "email": "Email",
+      "note": "Note",
+      "submit": "Send Request",
+      "submitting": "Sending...",
+      "submitError": "Could not send your request. The time slot may be full — please try again."
+    },
+    "step3": {
+      "titleLine1": "Request",
+      "titleLine2": "received.",
+      "description": "We’ve received your reservation request. Our team will call shortly to confirm. For changes or cancellations, please call {phone} — online cancellation isn’t available.",
+      "guests": "{count} guests",
+      "backHome": "Back to home"
+    },
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "daysShort": [
+      "M",
+      "T",
+      "W",
+      "T",
+      "F",
+      "S",
+      "S"
+    ]
+  },
+  "socialProof": {
+    "label": "Our Guests",
+    "titleLine1": "Many evenings.",
+    "titleLine2": "Many kind words.",
+    "description": "A few lines from guests who spent their evening at Ay'la.",
+    "ratingLabel": "Average rating",
+    "reviewCount": "240+ reviews",
+    "reviewCountLive": "{count} reviews",
+    "writeReview": "Leave a Google review",
+    "viewAllReviews": "All Google reviews",
+    "liveFromGoogle": "Live from Google",
+    "curatedReviewsNote": "Rating and review count are live from Google. Sample quotes reflect guest experiences — read all reviews on Google.",
+    "readAllReviews": "Read all reviews",
+    "reviews": [
+      {
+        "name": "Elif K.",
+        "source": "Google",
+        "rating": 5,
+        "date": "July 2025",
+        "text": "One of the best dinner spots we've found in Alanya. The mezze is fresh, the meat is cooked just right. The staff is attentive without being pushy — perfect if you want to enjoy the evening at your own pace."
+      },
+      {
+        "name": "Markus W.",
+        "source": "Tripadvisor",
+        "rating": 5,
+        "date": "August 2025",
+        "text": "Wonderful atmosphere, especially on the terrace at sunset. You must try the Çökertme kebab. Staff speaks English, which makes things easy for visitors."
+      },
+      {
+        "name": "Anna & David",
+        "source": "Google",
+        "rating": 5,
+        "date": "June 2025",
+        "text": "We booked online and our table was ready when we arrived. Loved the pumpkin dessert and the fajita. Better value than many restaurants around Alanya."
+      }
+    ],
+    "platforms": [
+      {
+        "label": "Google Reviews",
+        "description": "Opens the Google Maps review form directly."
+      },
+      {
+        "label": "Facebook",
+        "description": "Follow Ay'la on Facebook for updates and moments."
+      }
+    ],
+    "instagramEyebrow": "From our daily life",
+    "instagramHandle": "@ayla_alanya"
+  },
+  "footer": {
+    "statement": "Ay'la Food & More | Some Things Never Change",
+    "tagline": "Some Things Never Change.",
+    "findUs": "Find Us",
+    "viewMap": "View on map",
+    "discover": "Discover",
+    "information": "Information",
+    "contact": "Contact",
+    "links": {
+      "story": "Our Story",
+      "menu": "Menu",
+      "atmosphere": "Atmosphere",
+      "reviews": "Reviews",
+      "reservation": "Reservation",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "whatsapp": "WhatsApp",
+      "location": "Location"
+    },
+    "restaurantName": "Ay'la Food & More",
+    "hours": "Open daily",
+    "country": "Türkiye",
+    "instagramLink": "Instagram →",
+    "whatsappLink": "WhatsApp →",
+    "privacy": "Privacy",
+    "kvkk": "KVKK",
+    "copyright": "© {year} Ay'la Food & More",
+    "facebookLink": "Facebook →"
+  },
+  "cookies": {
+    "title": "Cookie preferences",
+    "body": "We use essential cookies for the site to work. Analytics and marketing cookies load only with your consent.",
+    "necessary": "Necessary only",
+    "acceptAll": "Accept all"
+  },
+  "faq": {
+    "metaTitle": "FAQ | Ay'la",
+    "metaDescription": "Directions, parking, hours, reservation policy, payment and allergens.",
+    "eyebrow": "Help",
+    "title": "Frequently asked questions",
+    "intro": "Directions, reservations, payment and allergens — what guests ask most.",
+    "back": "Back to home",
+    "directionsTitle": "Directions & parking",
+    "hoursLabel": "Daily",
+    "callUs": "Call us",
+    "whatsapp": "WhatsApp",
+    "directionsCta": "Open map",
+    "items": [
+      {
+        "q": "How do I get there and is there parking?",
+        "a": "Kadıpaşa, Sugözü Cd. No:10 — near central Alanya / Kleopatra. Easy by taxi or car. Street parking is limited; nearby lots are recommended."
+      },
+      {
+        "q": "What are your opening hours?",
+        "a": "Daily {openTime} — {closeTime}."
+      },
+      {
+        "q": "What is the reservation policy?",
+        "a": "Online bookings are available up to {maxDays} days ahead. For parties of {threshold}+ please call us. To cancel or change, call {phone}."
+      },
+      {
+        "q": "How do I pay?",
+        "a": "Cash or card at the table. There is no online payment."
+      },
+      {
+        "q": "Allergens / dietary needs?",
+        "a": "Please tell our staff before ordering if you have allergies or dietary requirements — the kitchen will help."
+      }
+    ]
+  },
+  "legal": {
+    "privacy": {
+      "metaTitle": "Privacy Policy | Ay'la",
+      "metaDescription": "Ay'la Food & More privacy policy and personal data protection.",
+      "title": "Privacy Policy",
+      "updated": "Last updated · August 2026",
+      "back": "Back to home",
+      "intro": "At Ay'la Food & More we use information you share through our website and reservation service only to provide our service and stay in touch with you.",
+      "sections": [
+        {
+          "title": "Information we collect",
+          "paragraphs": [
+            "Through the reservation form we may collect name, phone, email and optional notes.",
+            "Anonymous visit data (page views, device type) may be processed for website analytics."
+          ]
+        },
+        {
+          "title": "How we use information",
+          "paragraphs": [
+            "To confirm your reservation, plan seating and contact you when necessary.",
+            "To measure service quality and improve the website experience."
+          ]
+        },
+        {
+          "title": "Sharing and retention",
+          "paragraphs": [
+            "We do not sell personal data. Information may be shared only with service providers (hosting, email) or authorities when legally required.",
+            "Reservation records are kept for operational needs, then deleted or anonymised."
+          ]
+        },
+        {
+          "title": "Your rights",
+          "paragraphs": [
+            "Contact us at reservation@aylaalanya.com regarding your data protection rights."
+          ]
+        }
+      ]
+    },
+    "kvkk": {
+      "metaTitle": "KVKK Notice | Ay'la",
+      "metaDescription": "Ay'la Food & More personal data protection notice under Turkish KVKK.",
+      "title": "KVKK Disclosure Notice",
+      "updated": "Last updated · August 2026",
+      "back": "Back to home",
+      "intro": "Under Law No. 6698 on the Protection of Personal Data (\"KVKK\"), Ay'la Food & More informs you as the data controller.",
+      "sections": [
+        {
+          "title": "Data controller",
+          "paragraphs": [
+            "Ay'la Food & More — Kadıpaşa, Sugözü Cd. No:10, 07400 Alanya/Antalya. reservation@aylaalanya.com"
+          ]
+        },
+        {
+          "title": "Personal data processed",
+          "paragraphs": [
+            "Identity and contact: full name, phone, email.",
+            "Transaction security: IP address, cookie/analytics data (anonymous).",
+            "Reservation: date, time, party size, special notes."
+          ]
+        },
+        {
+          "title": "Purposes and legal basis",
+          "paragraphs": [
+            "Providing the reservation service (contract performance).",
+            "Customer relations and legitimate interest in service improvement.",
+            "Compliance with legal obligations."
+          ]
+        },
+        {
+          "title": "Your rights",
+          "paragraphs": [
+            "Under KVKK Art. 11 you may request information, correction, deletion, objection and lodge a complaint.",
+            "Send requests to reservation@aylaalanya.com."
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -2,25 +2,163 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111111;
+  --ayla-cream: #f3f1eb;
+  --ayla-cream-header: #f7f5f0;
+  --ayla-dark: #171613;
+  --ayla-charcoal: #161616;
+  --ayla-gold: #b79a72;
+  --ayla-on-dark: #f3f1eb;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-brand: var(--font-brand);
+  --color-ayla-cream: var(--ayla-cream);
+  --color-ayla-cream-header: var(--ayla-cream-header);
+  --color-ayla-dark: var(--ayla-dark);
+  --color-ayla-charcoal: var(--ayla-charcoal);
+  --color-ayla-gold: var(--ayla-gold);
+  --color-ayla-on-dark: var(--ayla-on-dark);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+html.lenis-active {
+  scroll-behavior: auto;
+}
+
+html:not(.lenis-active) {
+  scroll-behavior: smooth;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@keyframes signature-menu-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+
+/* Marka için gerçek italic font */
+.font-brand {
+  font-family: var(--font-brand), Georgia, serif;
+  font-style: italic;
+}
+
+/* Ay'la ortak UI — web sitesi + QR menü */
+.ayla-eyebrow {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgb(0 0 0 / 0.45);
+}
+
+.ayla-eyebrow-light {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.4);
+}
+
+.ayla-divider {
+  height: 1px;
+  width: 2.5rem;
+  background: rgb(0 0 0 / 0.2);
+}
+
+.ayla-btn-primary {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  background: var(--ayla-charcoal);
+  padding: 0.875rem 1.5rem;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: white;
+  transition: color 0.3s;
+}
+
+.ayla-btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: var(--ayla-gold);
+  transition: transform 0.5s;
+}
+
+.ayla-btn-primary:hover::before {
+  transform: translateX(0);
+}
+
+.ayla-btn-primary:disabled {
+  opacity: 0.4;
+}
+
+.ayla-btn-primary:disabled::before {
+  display: none;
+}
+
+.ayla-btn-primary > span {
+  position: relative;
+  z-index: 1;
 }

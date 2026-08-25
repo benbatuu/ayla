@@ -1,0 +1,387 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteSettings {
+  id                     String   @id @default("default")
+  businessName           String   @default("Ay'la Food & More")
+  phone                  String   @default("+90 549 613 53 73")
+  phoneSecondary         String   @default("+90 242 502 71 70")
+  email                  String   @default("reservation@aylaalanya.com")
+  addressLine1           String   @default("Kadıpaşa, Sugözü Cd. No:10")
+  addressLine2           String   @default("07400 Alanya / Antalya")
+  country                String   @default("Türkiye")
+  postalCode             String   @default("07400")
+  latitude               Float    @default(36.5484256)
+  longitude              Float    @default(31.9945747)
+  mapUrl                 String   @default("")
+  googlePlaceFeatureId   String   @default("0x14dc9983c30ef407:0xf396f6025729a5bb")
+  googlePlaceId          String   @default("")
+  instagramUrl           String   @default("")
+  instagramHandle        String   @default("@ayla_alanya")
+  facebookUrl            String   @default("")
+  whatsappUrl            String   @default("https://wa.me/905496135373")
+  googleReviewsUrl       String   @default("")
+  tripadvisorUrl         String   @default("")
+  privacyUrl             String   @default("")
+  kvkkUrl                String   @default("")
+  directionsNoteTr       String   @default("Kadıpaşa Mahallesi, Sugözü Cd. No:10. Alanya merkez / Kleopatra tarafına yakın. Taksi ve araçla kolay ulaşım; sokak üzeri park imkânı sınırlıdır — yakındaki otoparkları tercih edebilirsiniz.")
+  directionsNoteEn       String   @default("Kadıpaşa, Sugözü Cd. No:10. Near central Alanya / Kleopatra area. Easy by taxi or car; street parking is limited — nearby lots are recommended.")
+  directionsNoteRu       String   @default("Kadıpaşa, Sugözü Cd. No:10. Рядом с центром Аланьи / Клеопатрой. Удобно на такси или машине; уличная парковка ограничена — рекомендуем ближайшие стоянки.")
+  openTime               String   @default("10:00")
+  closeTime              String   @default("01:00")
+  maxGuests              Int      @default(12)
+  largePartyPhoneThreshold Int    @default(8)
+  maxReservationDaysAhead  Int    @default(7)
+  timeSlotInterval       Int      @default(30)
+  maxCoversPerSlot       Int      @default(24)
+  maxReservationsPerSlot Int      @default(8)
+  heroImageUrl           String   @default("/hero_image.jpeg")
+  storyImageMain         String   @default("/story_main.jpeg")
+  storyImageDetail       String   @default("/story_detail.jpeg")
+  storyImageKitchen      String   @default("/kitchen.jpeg")
+  storyImageTable        String   @default("/table.jpeg")
+  storyImageAyla         String   @default("/ayla.jpeg")
+  reservationBgUrl       String   @default("/table.jpeg")
+  galleryImageDuration   Int      @default(5500)
+  updatedAt              DateTime @updatedAt
+}
+
+model MenuSettings {
+  id                String   @id @default("default")
+  wifiSsid          String   @default("")
+  wifiPassword      String   @default("")
+  welcomeMessageTr  String   @default("Hoş geldiniz. Menünüze göz atın, garson çağırın veya sipariş verin.")
+  welcomeMessageEn  String   @default("Welcome. Browse the menu, call a waiter, or place an order.")
+  welcomeMessageRu  String   @default("Добро пожаловать. Просмотрите меню, позовите официанта или сделайте заказ.")
+  menuLogoUrl       String   @default("/ayla_logo_rounded.png")
+  menuBaseUrl       String   @default("http://menu.localhost:3000")
+  callWaiterEnabled Boolean  @default(true)
+  orderingEnabled   Boolean  @default(true)
+  showImages        Boolean  @default(true)
+  showPrices        Boolean  @default(true)
+  updatedAt         DateTime @updatedAt
+}
+
+model MessageBundle {
+  id        String   @id @default(cuid())
+  locale    String   @unique
+  data      Json
+  updatedAt DateTime @updatedAt
+}
+
+model MenuCategory {
+  id           String                    @id @default(cuid())
+  slug         String?                   @unique
+  imageUrl     String?
+  parentId     String?
+  externalId   Int?                      @unique
+  hasSubcategories Boolean               @default(false)
+  sortOrder    Int                       @default(0)
+  published    Boolean                   @default(true)
+  createdAt    DateTime                  @default(now())
+  updatedAt    DateTime                  @updatedAt
+  parent       MenuCategory?             @relation("CategoryTree", fields: [parentId], references: [id], onDelete: SetNull)
+  children     MenuCategory[]            @relation("CategoryTree")
+  translations MenuCategoryTranslation[]
+  items        MenuItem[]
+
+  @@index([published, sortOrder])
+  @@index([parentId])
+}
+
+model MenuCategoryTranslation {
+  id         String       @id @default(cuid())
+  categoryId String
+  locale     String
+  name       String
+  category   MenuCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@unique([categoryId, locale])
+}
+
+model MenuItem {
+  id           String                @id @default(cuid())
+  slug         String?               @unique
+  externalId   Int?                  @unique
+  categoryId   String?
+  sortOrder    Int                   @default(0)
+  imageUrl     String
+  price        String?
+  published    Boolean               @default(true)
+  isFeatured   Boolean               @default(false)
+  isVegetarian Boolean               @default(false)
+  isVegan      Boolean               @default(false)
+  isGlutenFree Boolean               @default(false)
+  spicyLevel   Int                   @default(0)
+  allergens    String                @default("")
+  calories     Int?
+  prepTimeMinutes Int?
+  createdAt    DateTime              @default(now())
+  updatedAt    DateTime              @updatedAt
+  category     MenuCategory?         @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  translations MenuItemTranslation[]
+  orderItems   TableOrderItem[]
+
+  @@index([published, sortOrder])
+  @@index([categoryId])
+}
+
+model MenuItemTranslation {
+  id          String   @id @default(cuid())
+  menuItemId  String
+  locale      String
+  category    String
+  name        String
+  description String
+  ingredients String   @default("")
+  menuItem    MenuItem @relation(fields: [menuItemId], references: [id], onDelete: Cascade)
+
+  @@unique([menuItemId, locale])
+}
+
+model RestaurantTable {
+  id          String       @id @default(cuid())
+  number      Int          @unique
+  label       String?
+  zone        String       @default("Salon")
+  qrToken     String       @unique @default(cuid())
+  active      Boolean      @default(true)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  waiterCalls WaiterCall[]
+  orders      TableOrder[]
+
+  @@index([active])
+}
+
+model WaiterCall {
+  id              String          @id @default(cuid())
+  tableId         String
+  type            String          @default("waiter")
+  status          String          @default("pending")
+  note            String?
+  paymentMethod   String?
+  paymentDetails  Json?
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  table           RestaurantTable @relation(fields: [tableId], references: [id], onDelete: Cascade)
+
+  @@index([status, createdAt])
+  @@index([tableId])
+}
+
+model MenuFeedback {
+  id         String   @id @default(cuid())
+  tableId    String?
+  type       String
+  menuItemId String?
+  rating     Int?
+  message    String
+  name       String?
+  phone      String?
+  createdAt  DateTime @default(now())
+
+  @@index([type, createdAt])
+}
+
+model TableOrder {
+  id        String           @id @default(cuid())
+  tableId   String
+  status    String           @default("pending")
+  note      String?
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+  table     RestaurantTable  @relation(fields: [tableId], references: [id], onDelete: Cascade)
+  items     TableOrderItem[]
+
+  @@index([status, createdAt])
+  @@index([tableId])
+}
+
+model TableOrderItem {
+  id           String     @id @default(cuid())
+  orderId      String
+  menuItemId   String?
+  quantity     Int        @default(1)
+  unitPrice    String?
+  nameSnapshot String
+  note         String?
+  order        TableOrder @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  menuItem     MenuItem?  @relation(fields: [menuItemId], references: [id], onDelete: SetNull)
+}
+
+model GalleryItem {
+  id           String                   @id @default(cuid())
+  type         String
+  src          String
+  poster       String?
+  sortOrder    Int                      @default(0)
+  published    Boolean                  @default(true)
+  createdAt    DateTime                 @default(now())
+  updatedAt    DateTime                 @updatedAt
+  translations GalleryItemTranslation[]
+}
+
+model GalleryItemTranslation {
+  id            String      @id @default(cuid())
+  galleryItemId String
+  locale        String
+  title         String
+  subtitle      String
+  galleryItem   GalleryItem @relation(fields: [galleryItemId], references: [id], onDelete: Cascade)
+
+  @@unique([galleryItemId, locale])
+}
+
+model Reservation {
+  id        String   @id @default(cuid())
+  guests    Int
+  date      DateTime
+  dateKey   String
+  time      String
+  name      String
+  phone     String
+  email     String
+  note      String?
+  status    String   @default("pending")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([dateKey, time, status])
+  @@index([status])
+}
+
+model ReservationSlot {
+  id          String   @id @default(cuid())
+  time        String   @unique
+  sortOrder   Int      @default(0)
+  enabled     Boolean  @default(true)
+  maxCovers   Int?
+  maxBookings Int?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([enabled, sortOrder])
+}
+
+model MediaAsset {
+  id        String   @id @default(cuid())
+  filename  String
+  url       String
+  mimeType  String
+  size      Int
+  createdAt DateTime @default(now())
+}
+
+model SeoSettings {
+  id                     String   @id @default("default")
+  metaTitleTr            String   @default("Ay'la Food & More | Bazı Şeyler Asla Değişmez")
+  metaTitleEn            String   @default("Ay'la Food & More | Some Things Never Change")
+  metaTitleRu            String   @default("Ay'la Food & More | Некоторые вещи никогда не меняются")
+  metaDescriptionTr      String   @default("Ay'la Food & More | Bazı Şeyler Asla Değişmez. Akdeniz ve Türk mutfağı, steak & ızgara. Her gün 10:00–01:00.")
+  metaDescriptionEn      String   @default("Ay'la Food & More | Some Things Never Change. Mediterranean & Turkish cuisine, steak & grill. Open daily 10:00–01:00.")
+  metaDescriptionRu      String   @default("Ay'la Food & More | Некоторые вещи никогда не меняются. Средиземноморская и турецкая кухня, стейки и гриль. Ежедневно 10:00–01:00.")
+  metaKeywords           String   @default("ayla food and more, ayla alanya, bazı şeyler asla değişmez, steak alanya, ızgara, akdeniz mutfağı, türk mutfağı, rezervasyon alanya")
+  ogImageUrl             String   @default("/hero_image.jpeg")
+  canonicalBaseUrl       String   @default("https://aylaalanya.com")
+  robotsAllowIndex       Boolean  @default(true)
+  structuredDataEnabled  Boolean  @default(true)
+  googleSiteVerification String   @default("")
+  bingSiteVerification   String   @default("")
+  updatedAt              DateTime @updatedAt
+}
+
+model MarketingSettings {
+  id                 String   @id @default("default")
+  googleAnalyticsId  String   @default("")
+  googleTagManagerId String   @default("")
+  facebookPixelId    String   @default("")
+  updatedAt          DateTime @updatedAt
+}
+
+model MarketingCampaign {
+  id        String   @id @default(cuid())
+  name      String
+  source    String
+  medium    String
+  campaign  String
+  content   String?
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([active, createdAt])
+}
+
+model PageView {
+  id          String   @id @default(cuid())
+  path        String
+  locale      String?
+  referrer    String?
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+  utmContent  String?
+  userAgent   String?
+  sessionId   String?
+  isMenu      Boolean  @default(false)
+  tableId     String?
+  createdAt   DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([path, createdAt])
+  @@index([isMenu, createdAt])
+  @@index([utmCampaign])
+}
+
+model NotificationLog {
+  id        String   @id @default(cuid())
+  channel   String
+  recipient String
+  subject   String
+  body      String
+  meta      Json?
+  status    String   @default("demo")
+  error     String?
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([channel, createdAt])
+}
+
+model CookieConsent {
+  id        String   @id @default(cuid())
+  choice    String
+  sessionId String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+model LoginAttempt {
+  id        String   @id @default(cuid())
+  email     String
+  ip        String   @default("")
+  success   Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([email, createdAt])
+  @@index([ip, createdAt])
+}
