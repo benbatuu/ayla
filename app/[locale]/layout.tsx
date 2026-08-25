@@ -20,7 +20,10 @@ import ruMessages from "../messages/ru.json";
 import trMessages from "../messages/tr.json";
 
 const fallbackMessages = { en: enMessages, tr: trMessages, ru: ruMessages };
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://aylaalanya.com";
+const SITE_URL =
+  process.env.SITE_URL?.replace(/\/$/, "") ||
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+  "https://aylaalanya.com";
 
 export const dynamic = "force-dynamic";
 
