@@ -1,6 +1,8 @@
 generator client {
-  provider = "prisma-client"
-  output   = "../app/generated/prisma"
+  provider      = "prisma-client"
+  output        = "../app/generated/prisma"
+  // Vercel serverless = rhel-openssl-3.0.x; native = local Mac/Linux
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
 }
 
 datasource db {
