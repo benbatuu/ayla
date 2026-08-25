@@ -95,6 +95,7 @@ export async function getSiteSettings() {
         "Kadıpaşa, Sugözü Cd. No:10. Рядом с центром Аланьи / Клеопатрой. Удобно на такси или машине; уличная парковка ограничена — рекомендуем ближайшие стоянки.",
       heroImageUrl: "/hero_image.jpeg",
       storyImageMain: "/story_main.jpeg",
+      storyImageDetail: "/story_detail.jpeg",
       storyImageKitchen: "/kitchen.jpeg",
       storyImageTable: "/table.jpeg",
       storyImageAyla: "/ayla.jpeg",

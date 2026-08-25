@@ -34,11 +34,11 @@ type Snapshot = {
   pageViews: Array<Record<string, unknown>>;
 };
 
-function reviveDates<T extends Record<string, unknown>>(
-  row: T,
+function reviveDates(
+  row: Record<string, unknown>,
   keys: string[]
-): T {
-  const next = { ...row };
+): Record<string, unknown> {
+  const next: Record<string, unknown> = { ...row };
   for (const key of keys) {
     if (typeof next[key] === "string") {
       next[key] = new Date(next[key] as string);
