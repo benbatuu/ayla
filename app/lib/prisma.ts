@@ -1,12 +1,15 @@
 import path from "node:path";
+import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "../generated/prisma/client";
+import { Pool } from "pg";
 
 /** Bump after `prisma generate` when schema changes to refresh the dev singleton. */
-const DEV_CLIENT_TOKEN = "20260825-neon-postgres";
+const DEV_CLIENT_TOKEN = "20260825-neon-adapter-pg";
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
   prismaClientToken: string | undefined;
+  pgPool: Pool | undefined;
 };
 
 function getDatabaseUrl(): string {
@@ -30,13 +33,17 @@ function getDatabaseUrl(): string {
   return url;
 }
 
-function createPrismaClient() {
+export function createPrismaClient() {
+  const connectionString = getDatabaseUrl();
+  const pool = new Pool({ connectionString });
+  const adapter = new PrismaPg(pool);
+
+  if (process.env.NODE_ENV !== "production") {
+    globalForPrisma.pgPool = pool;
+  }
+
   return new PrismaClient({
-    datasources: {
-      db: {
-        url: getDatabaseUrl(),
-      },
-    },
+    adapter,
     log: process.env.NODE_ENV === "development" ? ["error", "warn"] : ["error"],
   });
 }
@@ -54,6 +61,7 @@ function getPrismaClient() {
   }
 
   void globalForPrisma.prisma?.$disconnect();
+  void globalForPrisma.pgPool?.end();
   const client = createPrismaClient();
   globalForPrisma.prisma = client;
   globalForPrisma.prismaClientToken = DEV_CLIENT_TOKEN;

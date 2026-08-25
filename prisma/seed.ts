@@ -1,14 +1,12 @@
 import "dotenv/config";
 import bcrypt from "bcryptjs";
-import { PrismaClient } from "../app/generated/prisma/client";
+import { prisma } from "../app/lib/prisma";
 import { generateTimeSlots } from "../app/lib/content";
 import enMessages from "../app/messages/en.json";
 import ruMessages from "../app/messages/ru.json";
 import trMessages from "../app/messages/tr.json";
 import { qrTekproCategories, resolveCategoryImage } from "./qrtekpro-categories";
 import { seedQrTekproProducts } from "./qrtekpro-import";
-
-const prisma = new PrismaClient();
 
 const gallerySeed = [
   {

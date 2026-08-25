@@ -5,9 +5,9 @@
 import "dotenv/config";
 import fs from "node:fs";
 import path from "node:path";
-import { PrismaClient } from "../app/generated/prisma/client";
+import { createPrismaClient } from "../app/lib/prisma";
 
-const prisma = new PrismaClient();
+const prisma = createPrismaClient();
 
 type Snapshot = {
   users: Array<Record<string, unknown>>;

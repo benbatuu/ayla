@@ -1,7 +1,7 @@
 import "dotenv/config";
-import { PrismaClient } from "../app/generated/prisma/client";
+import { createPrismaClient } from "../app/lib/prisma";
 
-const p = new PrismaClient();
+const p = createPrismaClient();
 
 async function main() {
   const [u, m, s, seo] = await Promise.all([

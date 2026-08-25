@@ -3,14 +3,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./app/i18n/request.ts");
 
 const nextConfig = {
-  // Prisma custom output must be traced into Vercel serverless functions
-  serverExternalPackages: ["@prisma/client"],
-  outputFileTracingIncludes: {
-    "/*": ["./app/generated/prisma/**/*"],
-    "/api/**/*": ["./app/generated/prisma/**/*"],
-    "/admin/**/*": ["./app/generated/prisma/**/*"],
-    "/menu/**/*": ["./app/generated/prisma/**/*"],
-  },
+  serverExternalPackages: ["@prisma/client", "@prisma/adapter-pg", "pg"],
   images: {
     remotePatterns: [
       {
